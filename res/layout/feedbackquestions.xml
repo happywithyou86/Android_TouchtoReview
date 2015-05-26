@@ -1,0 +1,146 @@
+<!--
+ Copyright (c) 2012 Wireless Designs, LLC
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+ OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:id="@+id/LinearLayout1"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal" />
+
+            <ListView
+                android:id="@+id/questions"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"                
+                android:layout_marginTop="20dp"
+                android:layout_weight="1" >
+
+            </ListView>
+
+            <EditText
+                android:id="@+id/customer_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/background"
+                android:clickable="false"
+                android:ems="10"
+                android:gravity="top|left"
+                android:hint="Comment..."
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:maxLines="10"
+                android:minLines="3"
+                android:padding="10dp"
+                android:scrollbars="vertical" />
+
+            <LinearLayout
+                android:id="@+id/resolution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RadioButton
+                    android:id="@+id/happy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I&apos;m happy to leave my review, I don&apos;t need resolution." />
+
+                <RadioButton
+                    android:id="@+id/needresolution"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" I need resolution on this matter" />
+
+            </LinearLayout>
+
+			<LinearLayout
+			    android:id="@+id/resolution_ways"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="vertical" >
+
+				<LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+				    android:background="@color/Gray"
+				    android:orientation="vertical" >
+
+					<TextView
+					    android:id="@+id/textView1"
+					    android:layout_width="wrap_content"
+					    android:layout_height="wrap_content"
+					    android:layout_margin="5dp"
+					    android:text="Select way of resolution"
+					    android:textColor="@color/Black"
+					    android:textColorHint="@color/Black" />
+
+				</LinearLayout>
+
+                <RadioButton
+                    android:id="@+id/by_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="By Phone" />
+
+                <RadioButton
+                    android:id="@+id/by_letter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="By Letter" />
+                
+                <RadioButton
+                    android:id="@+id/by_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="By Email" />
+
+                <EditText
+                    android:id="@+id/for_resolution"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/submit"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_corners_blue"
+                android:onClick="submitFeedback"
+                android:padding="10dp"
+                android:text="send" />
+
+        </LinearLayout>
